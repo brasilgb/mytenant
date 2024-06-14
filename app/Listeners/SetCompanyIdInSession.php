@@ -20,6 +20,6 @@ class SetCompanyIdInSession
      */
     public function handle(object $event): void
     {
-        //
+        session()->put('company_id', $event->user->company_id);
     }
 }
